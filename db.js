@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 //const newLocal = mongoose.connection;
 function connectDB() {
   mongoose.connect(process.env.DB_URL, {
-    useUnifiedTopology: { limit: "30mb", extends: true },
+    useUnifiedTopology: true,
     useNewUrlParser: true,
   });
 
