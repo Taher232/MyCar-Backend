@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 function connectDB() {
   mongoose.connect(process.env.DB_URL, {
     useUnifiedTopology: { limit: "30mb", extends: true },
-    useNewUrlParser: { limit: "30mb", extends: true },
+    useNewUrlParser: true,
   });
 
   const connection = mongoose.connection;
